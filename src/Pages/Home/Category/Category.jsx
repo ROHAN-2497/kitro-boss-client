@@ -7,10 +7,15 @@ import slide2 from "../../../assets/home/slide2.jpg";
 import slide3 from "../../../assets/home/slide3.jpg";
 import slide4 from "../../../assets/home/slide4.jpg";
 import slide5 from "../../../assets/home/slide5.jpg";
+import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 const Category = () => {
   return (
-    <div>
-      <Swiper
+   <section>
+    <SectionTitle
+    subHeading={'From 11:00am to 10:00pm'}
+    heading={'ORDER ONLINE'}
+    ></SectionTitle>
+    <Swiper
         slidesPerView={4}
         spaceBetween={10}
         pagination={{
@@ -40,7 +45,7 @@ const Category = () => {
           <h2 className="uppercase text-center -mt-16 text-4xl text-white ">Salads</h2>
         </SwiperSlide>
       </Swiper>
-    </div>
+   </section>
   );
 };
 

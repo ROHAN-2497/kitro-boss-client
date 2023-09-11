@@ -1,0 +1,11 @@
+.bgImage {
+    background-image: url('');
+    background-size: cover; /* Adjust as needed */
+    /* Other CSS styles for your container */
+  }
+  
+  h1 {
+    /* Styles for your text */
+    color: white;
+    text-align: center; /* Center the text */
+  }
