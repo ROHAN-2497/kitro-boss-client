@@ -1,11 +1,5 @@
-.bgImage {
-    background-image: url('');
-    background-size: cover; /* Adjust as needed */
-    /* Other CSS styles for your container */
-  }
-  
-  h1 {
-    /* Styles for your text */
-    color: white;
-    text-align: center; /* Center the text */
-  }
+.disclaimer{
+  width: 1300px;
+  height: 572px;
+  background-image: url('../../../assets/home/banner.jpg');
+}
