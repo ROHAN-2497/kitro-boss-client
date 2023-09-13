@@ -1,25 +1,16 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const navbarOpitons = (
     <>
       <li>
-        <a>Item 1</a>
+     <Link to='/'>Home</Link>
       </li>
-      <li tabIndex={0}>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li>
-              <a>Submenu 1</a>
-            </li>
-            <li>
-              <a>Submenu 2</a>
-            </li>
-          </ul>
-        </details>
-      </li>
+     
       <li>
-        <a>Item 3</a>
+     <Link to='/menu'>Our Menu</Link>
       </li>
+     
     </>
   );
   return (
