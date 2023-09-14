@@ -8,16 +8,16 @@ import OrderTab from "../OrderTab/OrderTab";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 const Order = () => {
-    const categories = ['salads', 'pizzas', 'soups', 'desserts', 'drinks'];
+    const categories = ['salad', 'pizza', 'soup', 'dessert', 'drinks'];
     const {category} = useParams();
     const initialIndex = categories.indexOf(category)
   const [tabIndex, setTabIndex] = useState(initialIndex);
   const [menu] = useMenu();
   console.log(category)
-  const desserts = menu.filter((item) => item.category === "desserts");
-  const pizzas = menu.filter((item) => item.category === "pizzas");
-  const salads = menu.filter((item) => item.category === "salads");
-  const soups = menu.filter((item) => item.category === "soups");
+  const desserts = menu.filter((item) => item.category === "dessert");
+  const pizzas = menu.filter((item) => item.category === "pizza");
+  const salads = menu.filter((item) => item.category === "salad");
+  const soups = menu.filter((item) => item.category === "soup");
   const drinks = menu.filter((item) => item.category === "drinks");
   return (
     <div>
