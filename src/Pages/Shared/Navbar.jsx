@@ -1,17 +1,15 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-
+import { FaShoppingCart } from 'react-icons/fa';
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
- 
-  const handleLogOut = () =>{
+
+  const handleLogOut = () => {
     logOut()
-    .then(() =>{})
-    .catch(error => console.log(error))
-
-  }
-
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
 
   const navbarOpitons = (
     <>
@@ -27,13 +25,23 @@ const Navbar = () => {
       </li>
 
       <li>
-            <Link to="/secret">Secret</Link>
-          </li>
+        <Link to="/secret">Secret</Link>
+      </li>
+
+      <li>
+        <Link to="/">
+          <button className="btn">
+  <FaShoppingCart></FaShoppingCart>
+  <div className="badge badge-secondary">+99</div>
+</button>
+        </Link>
+      </li>
 
       {user ? (
         <>
-        <span>{user?.displayName}</span>
-          <button onClick={handleLogOut} className="btn btn-ghost">Log Out</button>
+          <button onClick={handleLogOut} className="btn btn-ghost">
+            Log Out
+          </button>
         </>
       ) : (
         <>
@@ -72,7 +80,10 @@ const Navbar = () => {
               {navbarOpitons}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">Kitro Boss</a>
+          <a className="btn uppercase btn-ghost  text-xl">
+            Kitro Boss <br  className="font-serif" />
+            Resturant
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navbarOpitons}</ul>
