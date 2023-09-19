@@ -9,7 +9,7 @@ const SignUp = () => {
   const {
     register,
     handleSubmit,
-    watch,
+    // watch,/
     reset,
     formState: { errors },
   } = useForm();
@@ -38,7 +38,7 @@ const SignUp = () => {
     });
   };
 
-  console.log(watch("example"));
+  // console.log(watch("example"));
 
   return (
     <>
