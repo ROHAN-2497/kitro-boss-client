@@ -29,9 +29,10 @@ const Navbar = () => {
       <li>
         <Link to="/secret">Secret</Link>
       </li>
+   
 
       <li>
-        <Link to="/">
+        <Link to="/dashboard/mycart">
           <button className="btn">
   <FaShoppingCart></FaShoppingCart>
   <div className="badge badge-secondary">+{cart?.length || 0}</div>
