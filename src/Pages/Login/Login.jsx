@@ -8,10 +8,11 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 const Login = () => {
   const { signUser } = useContext(AuthContext);
- const location = useLocation();
- const navigate = useNavigate();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [disabled, setDisabled] = useState(true);
   const from = location.state?.from?.pathname || "/";
   useEffect(() => {
@@ -37,7 +38,7 @@ const Login = () => {
           popup: "animate__animated animate__fadeOutUp",
         },
       });
-      navigate(from, { replace: true })
+      navigate(from, { replace: true });
     });
   };
   const handleValidatedCaptcha = (e) => {
@@ -103,12 +104,10 @@ const Login = () => {
                   placeholder="type recaptcha"
                   className="input input-bordered"
                 />
-               
               </div>
               <div className="form-control mt-6">
                 <input
-              /* TODO : make a button Disabled Captcha */
-                  disabled={false}
+                  disabled={disabled}
                   className="btn btn-primary"
                   type="submit"
                   value="Login"
@@ -121,6 +120,7 @@ const Login = () => {
                 </Link>
               </p>
             </form>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>
