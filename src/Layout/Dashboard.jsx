@@ -7,12 +7,10 @@ import {
   FaUtensils,
   FaBook,
   FaUsers,
-  FaFolderOpen,
   FaFolderMinus,
 } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../Components/hook/useCart/useCart";
-import Menu from "../Pages/Menu/Menu/Menu";
 
 const Dashboard = () => {
   const [cart] = useCart();
